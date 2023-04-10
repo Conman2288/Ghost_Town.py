@@ -136,8 +136,8 @@ class Game(Frame):
         # add grabbables to room 1
         r1.addGrabbable("revolver")
         # add items to room 1
-        r1.addItem("wall", "It has tens of empty wooden boxes, likey where mail would end up if there was anyone left to mail anything to")
-        r1.addItem("desk", "It is made of wood, old and rotted to the point its malluable like putty, your golden revolver is sunk into the center of the desk")
+        r1.addItem("wall", "Covered with dozens of empty wooden crates, likely where mail would end up if there was anyone left to mail anything to")
+        r1.addItem("desk", "It is made of wood, old and rotted beyond repair, your golden revolver is sunk into the center of the desk")
         r1.addItem("room", "Old and dusty, galss is shrewn around from a moment ago when you crashed through the window.")
 
         # add exits to room 2
@@ -145,7 +145,7 @@ class Game(Frame):
         r2.addExit("stable", r4)
         r2.addExit("factory", r5)
         # add items to room 2
-        r2.addItem("stairs", "It likely heads upstairs to the hotel rooms, but I wouldnt trust those staris as much as i would trust a job to go right")
+        r2.addItem("stairs", "It likely heads upstairs to the hotel rooms, but I wouldn't trust those stairs as much as I would trust a job to go right.")
         r2.addItem("bar", "All the Alcohol is gone, not suprised.")
 
         # add exits to room 3
@@ -155,9 +155,9 @@ class Game(Frame):
         # add grabbables to room 3
         r3.addGrabbable("stash")
         # add items to room 3
-        r3.addItem("bookshelves", "They are some small books left, however id bet they're so matted opening one would destroy it")
+        r3.addItem("bookshelves", "They are some small books left; however, I'd bet they're so matted opening one would destroy it.")
         r3.addItem("counter", "You see that the window next to the counter is shattered, taking a peak behind it.... ITS THERE! THE STASH!!")
-        r3.addItem("medicine_cabnet", "Just about empty, whatever is left is bound to do the opposite of what its supposed to")
+        r3.addItem("medicine_cabnet", "Just about empty. Whatever is left is completely expired.")
 
         # add exits to room 4
         r4.addExit("factory", r5)
@@ -165,7 +165,7 @@ class Game(Frame):
         r4.addExit("general_store", r3)
         r4.addExit("horse?", None) # DEATH!
         # add items to room 4
-        r4.addItem("wooden_stable","It looks like the only thing thats lasted the test of time, theres some grass growing.")
+        r4.addItem("wooden_stable","It looks like the only thing that has lasted the test of time. There's some grass growing.")
         r4.addItem("horse", "Its your horse! he came back for you, his pitch black tone standing as a contrast to the setting sun in the horizon")
         
         # add exits to room 5
@@ -174,9 +174,9 @@ class Game(Frame):
         r5.addExit("general_store", r3)
         r5.addExit("saloon", r2)
         # add items to room 5
-        r5.addItem("interior", "In the center of town its old and rusted, this factory has long run out of purpose other than as an unstable shelter")
+        r5.addItem("interior", "In the center of town its old and rusted. This factory is no longer in use.")
         r5.addItem("well", "Its all run out of water")
-        r5.addItem("doors", "The town is quite split up with few trails leading from place to place, but the factory has a trail leading to all of the different locations")
+        r5.addItem("doors", "The town is split up with few trails leading from place to place, but the factory has a trail leading to all of the different locations")
         
         # set room 1 as the current room at the beginning of the
         # game
@@ -246,12 +246,12 @@ class Game(Frame):
         Game.text.delete("1.0", END)
         if (Game.currentRoom == None):
             if ("stash" in self.inventory):
-                Game.text.insert(END, "You have left town on your horse, The stash resting on the back of the horse gleaming off the setting sun, You return to camp a hero!")
+                Game.text.insert(END, "You have left town on your horse, the stash resting on the back of the horse gleaming off the setting sun, You return to camp a hero!")
             else:
                 if("revolver" in self.inventory):
                     Game.text.insert(END, "You have left town on your horse leaving behind the stash. On your return to the camp your fellow outlaws attempt to shoot you and a intense shootout ocurrs where you come out on top. You escape on your horse with all the gold in the camp")
                 else:
-                    Game.text.insert(END, "You have left town on your horse leaving behind the stash. You are shot when returnign to camp empty handed.")          
+                    Game.text.insert(END, "You have left town on your horse leaving behind the stash. You are shot when you return to camp empty handed.")          
       
         else:
             # otherwise, display the appropriate status
@@ -267,7 +267,7 @@ class Game(Frame):
         # set the current room
         self.setRoomImage()
         # set the current status
-        self.setStatus("""The Old West is a place of almost infinite wealth surrounded by immense danger. You and your crew  just pulled off your biggest heist yet, robbing 4 high values trains all at the same time. After reconveining the law is hot on your trail and you flee to a nearby ghost town. BUT! as you approach the town a rival gang attacks sending you off your horse. While flying through the air you glimpse the stash of money fly off the horse as well and go into the town. Crashing into a building you hear your horse run off and the screams of gang members, lawmen, and your crew slowly drift off into the horizon FIND THE MONEY, GET OUT OF TOWN!!""")
+        self.setStatus("""The Old West a very dangerous place. You and your crew  just pulled off your biggest heist yet, robbing three trains in the same day. You meet up after the heist, but the law is hot on your trail, forcing you to flee to a nearby ghost town. BUT! as you approach the town a rival gang attacks sending you off your horse. While flying through the air you glimpse the stash of money fly off the horse as well and go into the town. Crashing into a building you hear your horse run off and the screams of gang members, lawmen, and your crew slowly drift off into the horizon FIND THE MONEY, GET OUT OF TOWN!!""")
 
 
 
